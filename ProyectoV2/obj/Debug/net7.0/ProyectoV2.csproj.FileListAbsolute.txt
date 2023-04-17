@@ -1,0 +1,15 @@
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\bin\Debug\net7.0\ProyectoV2.exe
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\bin\Debug\net7.0\ProyectoV2.deps.json
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\bin\Debug\net7.0\ProyectoV2.runtimeconfig.json
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\bin\Debug\net7.0\ProyectoV2.dll
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\bin\Debug\net7.0\ProyectoV2.pdb
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.csproj.AssemblyReference.cache
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.AssemblyInfoInputs.cache
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.AssemblyInfo.cs
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.csproj.CoreCompileInputs.cache
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.dll
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\refint\ProyectoV2.dll
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.pdb
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ProyectoV2.genruntimeconfig.cache
+D:\Palmore\Semestre 6\Teoría de la computación\ProyectoV2\obj\Debug\net7.0\ref\ProyectoV2.dll

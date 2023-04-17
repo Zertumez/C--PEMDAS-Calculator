@@ -1,0 +1,15 @@
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\bin\Debug\net7.0\P4.exe
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\bin\Debug\net7.0\P4.deps.json
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\bin\Debug\net7.0\P4.runtimeconfig.json
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\bin\Debug\net7.0\P4.dll
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\bin\Debug\net7.0\P4.pdb
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.csproj.AssemblyReference.cache
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.AssemblyInfoInputs.cache
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.AssemblyInfo.cs
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.csproj.CoreCompileInputs.cache
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.dll
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\refint\P4.dll
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.pdb
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\P4.genruntimeconfig.cache
+D:\Documentos\Palmore\Sexto semestre\Teoría de la computación\P4\obj\Debug\net7.0\ref\P4.dll
