@@ -28,3 +28,18 @@ D:\Coding\GitHub Repos\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\refint\P
 D:\Coding\GitHub Repos\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.pdb
 D:\Coding\GitHub Repos\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.genruntimeconfig.cache
 D:\Coding\GitHub Repos\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ref\ProyectoV2.dll
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\bin\Debug\net7.0\ProyectoV2.exe
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\bin\Debug\net7.0\ProyectoV2.deps.json
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\bin\Debug\net7.0\ProyectoV2.runtimeconfig.json
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\bin\Debug\net7.0\ProyectoV2.dll
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\bin\Debug\net7.0\ProyectoV2.pdb
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.csproj.AssemblyReference.cache
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.AssemblyInfoInputs.cache
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.AssemblyInfo.cs
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.csproj.CoreCompileInputs.cache
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.dll
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\refint\ProyectoV2.dll
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.pdb
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ProyectoV2.genruntimeconfig.cache
+D:\Coding\C--PEMDAS-Calculator\ProyectoV2\obj\Debug\net7.0\ref\ProyectoV2.dll
