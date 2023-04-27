@@ -172,6 +172,10 @@ namespace Calculadora
 
                 // Se reemplaza el contenido de los paréntesis por dentroParentesis en el string del ejercicio
                 ejercicio = ejercicio.Remove(inicio, fin - inicio + 1);
+// Se agrega la letra correspondiente del alfabeto donde se removió el contenido de los paréntesis en el string del ejercicio
+                char letra = (char)('a' + listaSubEjercicios.Count);
+                ejercicio = ejercicio.Insert(inicio, letra.ToString());
+
 
                 Console.WriteLine($"Se removió el siguiente string: {dentroParentesis}");
                 Console.WriteLine($"Ejercicio actual: {ejercicio}\n");
@@ -185,6 +189,116 @@ namespace Calculadora
             }
             // Finalmente, imprimimos el resultado final del proceso
             Console.WriteLine($"Resultado final: {ejercicio}");
+
+        //     Stack<double> pilaValores = new Stack<double>(); // Pila para almacenar los valores de los subejercicios
+        //     Stack<char> pilaOperadores = new Stack<char>(); // Pila para almacenar los operadores de los subejercicios
+
+        //     foreach (string subejercicio in listaSubEjercicios)
+        //     {
+        //         for (int i = 0; i < subejercicio.Length; i++)
+        //         {
+        //             char c = subejercicio[i];
+
+        //             if (char.IsDigit(c))
+        //             {
+        //                 // Si el caracter es un dígito, se agrega a la pila de valores
+        //                 string numeroString = c.ToString();
+        //                 int j = i + 1;
+        //                 while (j < subejercicio.Length && (char.IsDigit(subejercicio[j]) || subejercicio[j] == '.'))
+        //                 {
+        //                     numeroString += subejercicio[j];
+        //                     j++;
+        //                 }
+        //                 i = j - 1;
+        //                 double numero = double.Parse(numeroString);
+        //                 pilaValores.Push(numero);
+        //             }
+        //             else if (c == '(')
+        //             {
+        //                 // Si el caracter es un paréntesis de apertura, se agrega a la pila de operadores
+        //                 pilaOperadores.Push(c);
+        //             }
+        //             else if (c == ')')
+        //             {
+        //                 // Si el caracter es un paréntesis de cierre, se realizan las operaciones pendientes
+        //                 while (pilaOperadores.Peek() != '(')
+        //                 {
+        //                     double valor2 = pilaValores.Pop();
+        //                     double valor1 = pilaValores.Pop();
+        //                     char operador = pilaOperadores.Pop();
+        //                     double resultado = RealizarOperacion(valor1, valor2, operador);
+        //                     pilaValores.Push(resultado);
+        //                 }
+        //                 pilaOperadores.Pop(); // Se elimina el paréntesis de apertura de la pila de operadores
+        //             }
+        //             else if (EsOperador(c))
+        //             {
+        //                 // Si el caracter es un operador, se realizan las operaciones pendientes en la pila de operadores
+        //                 while (pilaOperadores.Count > 0 && PrioridadOperador(pilaOperadores.Peek()) >= PrioridadOperador(c))
+        //                 {
+        //                     double valor2 = pilaValores.Pop();
+        //                     double valor1 = pilaValores.Pop();
+        //                     char operador = pilaOperadores.Pop();
+        //                     double resultado = RealizarOperacion(valor1, valor2, operador);
+        //                     pilaValores.Push(resultado);
+        //                 }
+        //                 pilaOperadores.Push(c);
+        //             }
+        //         }
+
+        //         // Se realizan las operaciones pendientes en la pila de operadores
+        //         while (pilaOperadores.Count > 0)
+        //         {
+        //             double valor2 = pilaValores.Pop();
+        //             double valor1 = pilaValores.Pop();
+        //             char operador = pilaOperadores.Pop();
+        //             double resultado = RealizarOperacion(valor1, valor2, operador);
+        //             pilaValores.Push(resultado);
+        //         }
+
+        //         // Se muestra el resultado del subejercicio
+        //         Console.WriteLine($"El resultado de '{subejercicio}' es: {pilaValores.Pop()}");
+        //     }
+        // }
+        // // Función para determinar si un caracter es un operador
+        // private static bool EsOperador(char c)
+        // {
+        //     return c == '+' || c == '-' || c == '*' || c == '/';
+        // }
+
+        // // Función para determinar la prioridad de un operador
+        // private static int PrioridadOperador(char c)
+        // {
+        //     switch (c)
+        //     {
+        //         case '+':
+        //         case '-':
+        //             return 1;
+        //         case '*':
+        //         case '/':
+        //             return 2;
+        //         default:
+        //             return 0;
+        //     }
+        // }
+
+        // // Función para realizar una operación entre dos valores con un operador dado
+        // private static double RealizarOperacion(double valor1, double valor2, char operador)
+        // {
+        //     switch (operador)
+        //     {
+        //         case '+':
+        //             return valor1 + valor2;
+        //         case '-':
+        //             return valor1 - valor2;
+        //         case '*':
+        //             return valor1 * valor2;
+        //         case '/':
+        //             return valor1 / valor2;
+        //         default:
+        //             return 0;
+        //     }
         }
+
     }
 }
