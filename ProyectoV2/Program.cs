@@ -155,6 +155,34 @@ namespace Calculadora
                 return;
             }
 
+            foreach (var caracter in ejercicio)
+            {
+                // Se revisan todos los paréntesis izquierdos y derechos de la cadena, si cada par de paréntesis no tiene un operador a la izquierda del paréntesis izquierdo ni uno a la derecha del paréntesis derecho, se inserta un asterisco a la izquierda del paréntesis izquierdo
+                if (caracter == '(')
+                {
+                    int index = ejercicio.IndexOf(caracter);
+                    if (index > 0)
+                    {
+                        if (ejercicio[index - 1] != '+' && ejercicio[index - 1] != '-' && ejercicio[index - 1] != '*' && ejercicio[index - 1] != '/' && ejercicio[index - 1] != '^' && ejercicio[index - 1] != '(')
+                        {
+                            ejercicio = ejercicio.Insert(index, "*");
+                        }
+                    }
+                }
+                else if (caracter == ')')
+                {
+                    int index = ejercicio.IndexOf(caracter);
+                    if (index < ejercicio.Length - 1)
+                    {
+                        if (ejercicio[index + 1] != '+' && ejercicio[index + 1] != '-' && ejercicio[index + 1] != '*' && ejercicio[index + 1] != '/' && ejercicio[index + 1] != '^' && ejercicio[index + 1] != ')')
+                        {
+                            ejercicio = ejercicio.Insert(index + 1, "*");
+                        }
+                    }
+                }
+                
+            }
+
             // Mientras el ejercicio contenga paréntesis
             while (ejercicio.Contains("("))
             {
@@ -172,7 +200,7 @@ namespace Calculadora
 
                 // Se reemplaza el contenido de los paréntesis por dentroParentesis en el string del ejercicio
                 ejercicio = ejercicio.Remove(inicio, fin - inicio + 1);
-// Se agrega la letra correspondiente del alfabeto donde se removió el contenido de los paréntesis en el string del ejercicio
+                // Se agrega la letra correspondiente del alfabeto donde se removió el contenido de los paréntesis en el string del ejercicio
                 char letra = (char)('a' + listaSubEjercicios.Count);
                 ejercicio = ejercicio.Insert(inicio, letra.ToString());
 
@@ -186,6 +214,7 @@ namespace Calculadora
             foreach (var subEjercicio in listaSubEjercicios)
             {
                 Console.WriteLine(subEjercicio);
+                // Revisar si la letra en el subejercicio tiene un operador antes o después, si no lo tiene, agregar un asterisco
             }
             // Finalmente, imprimimos el resultado final del proceso
             Console.WriteLine($"Resultado final: {ejercicio}");
