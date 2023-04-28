@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Coding\\C--PEMDAS-Calculator\\ProyectoV2\\ProyectoV2.csproj": {}
+    "D:\\Coding\\C--PEMDAS-Calculator\\pruebas\\pruebas.csproj": {}
   },
   "projects": {
-    "D:\\Coding\\C--PEMDAS-Calculator\\ProyectoV2\\ProyectoV2.csproj": {
+    "D:\\Coding\\C--PEMDAS-Calculator\\pruebas\\pruebas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Coding\\C--PEMDAS-Calculator\\ProyectoV2\\ProyectoV2.csproj",
-        "projectName": "ProyectoV2",
-        "projectPath": "D:\\Coding\\C--PEMDAS-Calculator\\ProyectoV2\\ProyectoV2.csproj",
+        "projectUniqueName": "D:\\Coding\\C--PEMDAS-Calculator\\pruebas\\pruebas.csproj",
+        "projectName": "pruebas",
+        "projectPath": "D:\\Coding\\C--PEMDAS-Calculator\\pruebas\\pruebas.csproj",
         "packagesPath": "C:\\Users\\nanop\\.nuget\\packages\\",
-        "outputPath": "D:\\Coding\\C--PEMDAS-Calculator\\ProyectoV2\\obj\\",
+        "outputPath": "D:\\Coding\\C--PEMDAS-Calculator\\pruebas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

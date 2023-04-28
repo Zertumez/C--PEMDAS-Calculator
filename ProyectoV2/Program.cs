@@ -36,7 +36,7 @@ namespace Calculadora
             List<string> simbolosNoMezclables = new List<string> { "*", "/", "^" };
 
             // Creamos una lista con los símbolos que no deben aparecer más de una vez seguida de otra
-            List<string> simbolosNoRepetibles = new List<string> { "*", "/", ".", "^", "," };
+            List<string> simbolosNoRepetibles = new List<string> { "*", "/", ".", "^" };
 
             // Creamos una variable para almacenar el último símbolo revisado
             string ultimoSimbolo = "";
@@ -155,35 +155,38 @@ namespace Calculadora
                 return;
             }
 
-            foreach (var caracter in ejercicio)
+            // Eliminar paréntesis al principio y al final
+            if (ejercicio[0] == '(' && ejercicio[ejercicio.Length - 1] == ')')
             {
-                // Se revisan todos los paréntesis izquierdos y derechos de la cadena, si cada par de paréntesis no tiene un operador a la izquierda del paréntesis izquierdo ni uno a la derecha del paréntesis derecho, se inserta un asterisco a la izquierda del paréntesis izquierdo
-                if (caracter == '(')
-                {
-                    int index = ejercicio.IndexOf(caracter);
-                    if (index > 0)
-                    {
-                        if (ejercicio[index - 1] != '+' && ejercicio[index - 1] != '-' && ejercicio[index - 1] != '*' && ejercicio[index - 1] != '/' && ejercicio[index - 1] != '^' && ejercicio[index - 1] != '(')
-                        {
-                            ejercicio = ejercicio.Insert(index, "*");
-                        }
-                    }
-                }
-                else if (caracter == ')')
-                {
-                    int index = ejercicio.IndexOf(caracter);
-                    if (index < ejercicio.Length - 1)
-                    {
-                        if (ejercicio[index + 1] != '+' && ejercicio[index + 1] != '-' && ejercicio[index + 1] != '*' && ejercicio[index + 1] != '/' && ejercicio[index + 1] != '^' && ejercicio[index + 1] != ')')
-                        {
-                            ejercicio = ejercicio.Insert(index + 1, "*");
-                        }
-                    }
-                }
-                
+                ejercicio = ejercicio.Substring(1, ejercicio.Length - 2);
             }
 
+            // Ciclar por la expresión y agregar asteriscos donde sea necesario
+            string result = "";
+            for (int i = 0; i < ejercicio.Length; i++)
+            {
+                char c = ejercicio[i];
+                if (c == '(' && i > 0 && char.IsLetterOrDigit(ejercicio[i - 1]))
+                {
+                    result += "*" + c;
+                }
+                else if (c == ')' && i < ejercicio.Length - 1 && char.IsLetterOrDigit(ejercicio[i + 1]))
+                {
+                    result += c + "*";
+                }
+                else
+                {
+                    result += c;
+                }
+            }
+            
+            ejercicio = result;
+            Console.WriteLine("Expresión transformada: " + ejercicio);
+
             // Mientras el ejercicio contenga paréntesis
+            Dictionary<char, string> diccionarioSubEjercicios = new Dictionary<char, string>();
+            char letra = 'a';
+
             while (ejercicio.Contains("("))
             {
                 // Se busca el último paréntesis izquierdo en el ejercicio
@@ -195,138 +198,33 @@ namespace Calculadora
                 // Se extrae el string que se encuentra dentro de los paréntesis
                 string dentroParentesis = ejercicio.Substring(inicio + 1, fin - inicio - 1);
 
-                // Agregamos el string dentroParentesis a la lista de pasos
-                listaSubEjercicios.Add(dentroParentesis);
+                // Se agrega el subejercicio al diccionario con la letra indicadora actual
+                diccionarioSubEjercicios.Add(letra, dentroParentesis);
 
                 // Se reemplaza el contenido de los paréntesis por dentroParentesis en el string del ejercicio
                 ejercicio = ejercicio.Remove(inicio, fin - inicio + 1);
+
                 // Se agrega la letra correspondiente del alfabeto donde se removió el contenido de los paréntesis en el string del ejercicio
-                char letra = (char)('a' + listaSubEjercicios.Count);
                 ejercicio = ejercicio.Insert(inicio, letra.ToString());
 
+                // Incrementa la letra para el siguiente subejercicio
+                letra = (char)(letra + 1);
 
                 Console.WriteLine($"Se removió el siguiente string: {dentroParentesis}");
                 Console.WriteLine($"Ejercicio actual: {ejercicio}\n");
             }
 
-            //Imprimimos la lista de sub ejercicios
-            Console.WriteLine("Lista de sub ejercicios:");
-            foreach (var subEjercicio in listaSubEjercicios)
+
+            // Imprimir el diccionario en pantalla
+            Console.WriteLine("Lista de subejercicios:");
+            foreach (KeyValuePair<char, string> subEjercicio in diccionarioSubEjercicios)
             {
-                Console.WriteLine(subEjercicio);
-                // Revisar si la letra en el subejercicio tiene un operador antes o después, si no lo tiene, agregar un asterisco
+                Console.WriteLine($"{subEjercicio.Key}: {subEjercicio.Value}");
             }
-            // Finalmente, imprimimos el resultado final del proceso
+
+            // Imprimir el resultado final
             Console.WriteLine($"Resultado final: {ejercicio}");
-
-        //     Stack<double> pilaValores = new Stack<double>(); // Pila para almacenar los valores de los subejercicios
-        //     Stack<char> pilaOperadores = new Stack<char>(); // Pila para almacenar los operadores de los subejercicios
-
-        //     foreach (string subejercicio in listaSubEjercicios)
-        //     {
-        //         for (int i = 0; i < subejercicio.Length; i++)
-        //         {
-        //             char c = subejercicio[i];
-
-        //             if (char.IsDigit(c))
-        //             {
-        //                 // Si el caracter es un dígito, se agrega a la pila de valores
-        //                 string numeroString = c.ToString();
-        //                 int j = i + 1;
-        //                 while (j < subejercicio.Length && (char.IsDigit(subejercicio[j]) || subejercicio[j] == '.'))
-        //                 {
-        //                     numeroString += subejercicio[j];
-        //                     j++;
-        //                 }
-        //                 i = j - 1;
-        //                 double numero = double.Parse(numeroString);
-        //                 pilaValores.Push(numero);
-        //             }
-        //             else if (c == '(')
-        //             {
-        //                 // Si el caracter es un paréntesis de apertura, se agrega a la pila de operadores
-        //                 pilaOperadores.Push(c);
-        //             }
-        //             else if (c == ')')
-        //             {
-        //                 // Si el caracter es un paréntesis de cierre, se realizan las operaciones pendientes
-        //                 while (pilaOperadores.Peek() != '(')
-        //                 {
-        //                     double valor2 = pilaValores.Pop();
-        //                     double valor1 = pilaValores.Pop();
-        //                     char operador = pilaOperadores.Pop();
-        //                     double resultado = RealizarOperacion(valor1, valor2, operador);
-        //                     pilaValores.Push(resultado);
-        //                 }
-        //                 pilaOperadores.Pop(); // Se elimina el paréntesis de apertura de la pila de operadores
-        //             }
-        //             else if (EsOperador(c))
-        //             {
-        //                 // Si el caracter es un operador, se realizan las operaciones pendientes en la pila de operadores
-        //                 while (pilaOperadores.Count > 0 && PrioridadOperador(pilaOperadores.Peek()) >= PrioridadOperador(c))
-        //                 {
-        //                     double valor2 = pilaValores.Pop();
-        //                     double valor1 = pilaValores.Pop();
-        //                     char operador = pilaOperadores.Pop();
-        //                     double resultado = RealizarOperacion(valor1, valor2, operador);
-        //                     pilaValores.Push(resultado);
-        //                 }
-        //                 pilaOperadores.Push(c);
-        //             }
-        //         }
-
-        //         // Se realizan las operaciones pendientes en la pila de operadores
-        //         while (pilaOperadores.Count > 0)
-        //         {
-        //             double valor2 = pilaValores.Pop();
-        //             double valor1 = pilaValores.Pop();
-        //             char operador = pilaOperadores.Pop();
-        //             double resultado = RealizarOperacion(valor1, valor2, operador);
-        //             pilaValores.Push(resultado);
-        //         }
-
-        //         // Se muestra el resultado del subejercicio
-        //         Console.WriteLine($"El resultado de '{subejercicio}' es: {pilaValores.Pop()}");
-        //     }
-        // }
-        // // Función para determinar si un caracter es un operador
-        // private static bool EsOperador(char c)
-        // {
-        //     return c == '+' || c == '-' || c == '*' || c == '/';
-        // }
-
-        // // Función para determinar la prioridad de un operador
-        // private static int PrioridadOperador(char c)
-        // {
-        //     switch (c)
-        //     {
-        //         case '+':
-        //         case '-':
-        //             return 1;
-        //         case '*':
-        //         case '/':
-        //             return 2;
-        //         default:
-        //             return 0;
-        //     }
-        // }
-
-        // // Función para realizar una operación entre dos valores con un operador dado
-        // private static double RealizarOperacion(double valor1, double valor2, char operador)
-        // {
-        //     switch (operador)
-        //     {
-        //         case '+':
-        //             return valor1 + valor2;
-        //         case '-':
-        //             return valor1 - valor2;
-        //         case '*':
-        //             return valor1 * valor2;
-        //         case '/':
-        //             return valor1 / valor2;
-        //         default:
-        //             return 0;
-        //     }
+            
         }
 
     }
