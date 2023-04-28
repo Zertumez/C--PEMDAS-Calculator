@@ -1,0 +1,12 @@
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\bin\Debug\net7.0\calculadorapemdas.deps.json
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\bin\Debug\net7.0\calculadorapemdas.dll
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\bin\Debug\net7.0\calculadorapemdas.pdb
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.csproj.AssemblyReference.cache
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.AssemblyInfoInputs.cache
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.AssemblyInfo.cs
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.csproj.CoreCompileInputs.cache
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.dll
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\refint\calculadorapemdas.dll
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\calculadorapemdas.pdb
+D:\Palmore\Semestre 6\libreria\libreriaExamen\calculadorapemdas\calculadorapemdas\obj\Debug\net7.0\ref\calculadorapemdas.dll
